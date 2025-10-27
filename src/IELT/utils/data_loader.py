@@ -95,7 +95,7 @@ def build_loader(config):
 		train_sampler = DistributedSampler(train_set, num_replicas=get_world_size(),
 		                                   rank=config.local_rank, shuffle=True)
 		test_sampler = DistributedSampler(test_set)
-	num_workers = 0 if sys.platform == 'win32' else 16
+	num_workers = 0 if sys.platform == 'win32' else 18
 	# print(sys.platform)
 	train_loader = DataLoader(train_set, sampler=train_sampler, batch_size=config.data.batch_size,
 	                          num_workers=num_workers, drop_last=True, pin_memory=True)

@@ -25,7 +25,7 @@ Help() {
 
 echo "[SCRIPT SPLIT DATA IN N FOLDS] Initializing..."
 
-dir_all="../data/all"
+dir_all="../data/all_compact" #alterar caso queira usar o dataset compacto
 dir_train="../data/train"
 dir_dobras="../data/dobras/"
 subset=0
